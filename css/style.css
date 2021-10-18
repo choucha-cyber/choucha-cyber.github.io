@@ -1,0 +1,308 @@
+
+* {
+	box-sizing: border-box;
+    outline: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+    background-color: #B39096;
+    color: black;
+	font-family: "Bree Serif";
+	font-size: 1.8rem;
+	line-height: 2;
+	margin: 0;
+	text-align: center;
+}
+
+.container {
+	margin: 0 auto;
+    max-width: 1100px;
+}
+
+.clear{
+    clear: both;
+}
+
+a { /*Tous les liens*/
+    color: rgba(246, 36, 89,1);
+	text-decoration: none;
+}
+
+/*Toutes les sections sauf header et présentation*/
+#competences, #services, #resume, #contact, footer {
+    margin: 100px 0;
+    padding: 0 25px;
+}
+
+#competences figure h3{
+    color: black;
+}
+
+/* HEADER */
+header {
+	padding: 50px;
+}
+
+header div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header a {
+	color: black;
+}
+
+header a:hover {
+	color: rgba(246, 36, 89,1);
+}
+
+header div > a { /* la première balise <a>*/
+    font-size: 4rem;
+}
+
+
+header img {
+    display: block;
+    margin: 0 auto;
+	width: 50px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav a {
+	font-size: 2rem;
+    padding: 0 50px;
+}
+
+
+header nav a i.fas, header nav a i.far{
+	display: block;
+	padding: 10px;
+}
+
+#logo_aicha{
+    border-radius: 50%;
+    width: 15%;
+}
+
+/* MAIN INDEX */
+main h1 {
+	font-size: 4rem;
+}
+
+main h2{
+    font-size: 3rem;
+    padding: 1rem;
+}
+main h3{
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+main h2, main h3 {
+    color: #f62459;
+}
+
+/*section présentation*/
+#presentation {
+	padding: 150px 75px;
+}
+
+#presentation p {
+	padding-bottom: 50px;
+}
+
+.discover, .readmore{
+    padding: 10px 20px;
+}
+
+.discover, section a:hover {
+    background: #f62459;
+    border-radius: 5px;
+	color: white;
+}
+
+/*section compétences*/
+#competences h3 {
+	margin: 0;
+	font-size: 3rem;	
+	color: #777;
+}
+
+#competences figure{
+    margin: 0 0 75px;
+}
+
+#competences figure:last-of-type{
+    margin-bottom: 0;
+}
+
+/*section services*/
+.service{
+    padding: 20px;
+}
+
+.service i {
+	font-size: 2.5rem;
+	color: black;
+	width: 75px;
+	height: 75px;
+	padding-top: 22px;
+	border-radius: 50%;
+}
+
+/*section résumé*/
+#resume article{
+    text-align: left;
+}
+
+#resume article img {
+    width: 100%;
+}
+
+/*section contact*/
+#contact p{
+    text-align: left;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    flex-basis:100%;
+}
+
+input, textarea {
+	padding: 20px 20px 20px 70px;
+	margin: 5px 0;
+	color: #666;
+	background-color: transparent;
+	border-radius: 50px;
+	border: 1px solid #ccc;
+	font-family: Arial;
+	font-size: 1.6rem;
+}
+
+input:first-child {
+	background-image: url(../img/bg_form_name.svg);
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 10px;
+}
+
+input:nth-of-type(2) {
+	background-image: url(../img/bg_form_mail.svg);
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 10px;
+}
+
+textarea {
+	width: 100%;
+	resize: none;
+	background-image: url(../img/bg_form_message.svg);
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position: 10px;
+}
+
+button {
+	margin: 25px 25px;
+	padding: 15px 25px;
+	border: 0;
+	color: white;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button[type="submit"] {
+	background-color: #f62459;
+}
+
+button[type="reset"] {
+	background-color: #999;
+}
+
+/* FOOTER */
+footer img {
+    width: 50px;
+}
+
+/* MEDIA QUERIES */
+/*Tablet*/
+@media screen and (min-width:768px){
+    #presentation {
+        background: url(../img/bg_header.jpg) no-repeat center center;
+        opacity: 0.6;
+        background-size: cover;
+    }
+
+    #resume article img {
+        width: 50%;
+    }
+
+    #resume article:nth-of-type(even) img {
+        float: left;
+        margin-right: 25px;
+    }
+    
+    #resume article:nth-of-type(odd) img {
+        float: right;
+        margin-left: 25px;
+    }
+
+    form div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    input{
+        flex-basis:48%;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width:1025px){
+    header div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header img {
+        display: inline;
+        margin: 0 10px 0 0;
+        vertical-align: middle;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    #competences div div, #services div div{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/********FOOTER********/
+
+footer i{
+    padding: 2rem;
+}
